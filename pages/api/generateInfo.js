@@ -1,28 +1,31 @@
-const { Configuration, OpenAIApi } = require('openai');
+const { OpenAI } = require('openai-api');
 const { recipePrompt } = require('../../data/recipe.json');
 
-const config = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-  apiBaseUrl: 'https://api.openai.com/v1',
-});
-
-const openai = new OpenAIApi(config);
+const openai = new OpenAI(process.env.OPENAI_API_KEY);
 
 const generateInfo = async (req, res) => {
   const { recipe } = req.body;
 
   try {
-    const response = await openai.completions.create({
+    const completion = await openai.complete({
       engine: 'davinci',
-      prompt: `${recipePrompt}\n\n${recipe}`,
-      maxTokens: 60,
+      prompt: `${recipePrompt}${recipe}`,
+      maxTokens: 200,
+      temperature: 0,
       n: 1,
-      stop: ['\n'],
     });
 
-    res.send(response.data.choices[0].text);
+    const response = completion.data.choices[0].text;
+
+    return res.status(200).json({
+      success: true,
+      data: response,
+    });
   } catch (error) {
-    res.status(500).send(`Error: ${error.message}`);
+    return res.status(500).json({
+      success: false,
+      error: error.message,
+    });
   }
 };
 
