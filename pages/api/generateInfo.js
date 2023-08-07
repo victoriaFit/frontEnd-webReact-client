@@ -22,9 +22,15 @@ const generateInfo = async (req, res) => {
       data: response,
     });
   } catch (error) {
+    if (error.response && error.response.status === 401) {
+      return res.status(401).json({
+        error: 'Please provide a valid API key.',
+      });
+    }
+
     return res.status(500).json({
-      success: false,
-      error: error.message,
+      error:
+        'An error occurred while generating recipe information. Please try again later.',
     });
   }
 };
