@@ -9,6 +9,11 @@ const port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 
+app.use('/openai', require('./router'));
+
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });
+
+
+// Path: pages\api\router.js

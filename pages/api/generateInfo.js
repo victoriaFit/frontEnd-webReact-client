@@ -1,8 +1,13 @@
-const { OpenAI } = require('openai-api');
-const { recipePrompt } = require('../../data/recipe.json');
 
-const openai = new OpenAI(process.env.OPENAI_API_KEY);
+const { Configuration, OpenAIApi } = require('openai');
 
+const { recipePrompt }  = require('./prompt.json');
+
+const configuration = new Configuration({
+    apiKey: process.env.OPENAI_API_KEY,
+});
+
+const openai = new OpenAIApi(configuration);
 const generateInfo = async (req, res) => {
   const { recipe } = req.body;
 
