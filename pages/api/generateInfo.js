@@ -1,4 +1,5 @@
 const { Configuration, OpenAIApi } = require('openai');
+const { recipePrompt } = require('../../data/recipe.json');
 
 const config = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -7,11 +8,13 @@ const config = new Configuration({
 
 const openai = new OpenAIApi(config);
 
-async function generateInfo(req, res) {
+const generateInfo = async (req, res) => {
+  const { recipe } = req.body;
+
   try {
     const response = await openai.completions.create({
       engine: 'davinci',
-      prompt: 'Write a short summary of the topic',
+      prompt: `${recipePrompt}\n\n${recipe}`,
       maxTokens: 60,
       n: 1,
       stop: ['\n'],
@@ -21,6 +24,6 @@ async function generateInfo(req, res) {
   } catch (error) {
     res.status(500).send(`Error: ${error.message}`);
   }
-}
+};
 
 module.exports = { generateInfo };
