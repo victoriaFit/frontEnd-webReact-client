@@ -15,7 +15,8 @@ const { Configuration, OpenAIApi } = require('openai');
 const { recipePrompt }  = require('./prompt.json');
 
 const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
+  // apiKey: process.env.OPENAI_API_KEY,
+  apiKey: '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',
 });
 
 const openai = new OpenAIApi(configuration);
@@ -45,10 +46,7 @@ const generateInfo = async (req, res) => {
           error: "Please provide a valid API key.",
         });
       }
-      return res.status(500).json({
-        error:
-          "An error occurred while generating recipe information. Please try again later.",
-      });
+      return res.status(500).json(error)
     }
   };
   
