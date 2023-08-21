@@ -1,5 +1,12 @@
 import React, { useState } from "react";
+import Link from 'next/link';
 import styles from "../styles/home.module.css";
+
+
+import Home from './Home/index';
+import About from './About/index';
+import Services from './Services/index';
+import Questions from './Questions/index';
 
 const RecipeInfo = () => {
   const [recipe, setRecipe] = useState("");
@@ -30,10 +37,10 @@ const RecipeInfo = () => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <a href="#" className={styles["header-link"]}>Início</a>
-        <a href="#" className={styles["header-link"]}>Sobre Nós</a>
-        <a href="#" className={styles["header-link"]}>Serviços</a>
-        <a href="#" className={styles["header-link"]}>Dúvidas e FAQ</a>
+        <Link href="/" className={styles["header-link"]}>Início</Link>
+        <Link href="/About" className={styles["header-link"]}>Sobre Nós</Link>
+        <Link href="/Services" className={styles["header-link"]}>Serviços</Link>
+        <Link href="/Questions" className={styles["header-link"]}>Dúvidas e FAQ</Link>
       </header>
       <div className={styles.chat}>
         <div className={styles["chat-header"]}>Assistência Técnica Victória Fitness</div>
