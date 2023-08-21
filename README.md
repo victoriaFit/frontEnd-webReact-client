@@ -14,17 +14,23 @@ OPENAI_API_KEY="YOUR_API_KEY"
 ```
 **Note**: You will need to set up a payment method on the OpenAI Platform, even for free usage, to make the API key work. A $5 charge will be temporary, and you will receive a refund later.
 
-## 3. Start the development server
+## 3. Build the project
+Build the project with the following command:
+```
+npm run build
+```
+
+## 4. Start the development server
 Start the development server with the following command:
 ```
 npm run devserver
 ```
 
-## 4. Start the project
+## 5. Start the project
 Start the project with the following command:
 ```
 npm run start
 ```
 
-## 5. Access the server
+## 6. Access the server
 Access the server at [localhost:3000](http://localhost:3000/) to verify that the project is running correctly.
