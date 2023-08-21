@@ -1,14 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
-import Button from "../components/Button";
-import ClickCount from "../components/ClickCount";
+import React, { useState } from "react";
 import styles from "../styles/home.module.css";
-
-function throwError() {
-  console.log(
-    // The function body() is not defined
-    document.body()
-  );
-}
 
 const RecipeInfo = () => {
   const [recipe, setRecipe] = useState("");
@@ -37,32 +28,38 @@ const RecipeInfo = () => {
   };
 
   return (
-    <div className="container">
-      <div className="chat">
-        <div className="chat-header">Assistência Técnica Victória Fitness</div>
-        <div className="chat-messages">
-          <div className="chat-message chat-message-bot">
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <a href="#" className={styles["header-link"]}>Início</a>
+        <a href="#" className={styles["header-link"]}>Sobre Nós</a>
+        <a href="#" className={styles["header-link"]}>Serviços</a>
+        <a href="#" className={styles["header-link"]}>Dúvidas e FAQ</a>
+      </header>
+      <div className={styles.chat}>
+        <div className={styles["chat-header"]}>Assistência Técnica Victória Fitness</div>
+        <div className={styles["chat-messages"]}>
+          <div className={`${styles["chat-message"]} ${styles["chat-message-bot"]}`}>
             Olá! Como posso ajudar?
           </div>
         </div>
-        <form className="form" onSubmit={handleSubmit}>
-          <div className="form-header">Tire suas dúvidas</div>
-          <div className="form-label">Digite sua pergunta:</div>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <div className={styles["form-header"]}>Tire suas dúvidas</div>
+          <div className={styles["form-label"]}>Digite sua pergunta:</div>
           <textarea
-            className="form-textarea"
+            className={styles["form-textarea"]}
             name="recipe"
             id="recipe"
             cols="30"
             rows="10"
             onChange={handleRecipeChange}
           ></textarea>
-          <button className="form-button" type="submit">
+          <button className={styles["form-button"]} type="submit">
             Enviar
           </button>
         </form>
       </div>
       <section>
-        <h2>Aqui está sua resposta</h2>
+        <h2>Aqui está sua respostaee</h2>
         <p>{nutritionInfo}</p>
       </section>
     </div>
