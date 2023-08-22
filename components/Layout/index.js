@@ -6,15 +6,15 @@ const Layout = ({ children, showHeader = true }) => {
       <div className={styles.container}>
         {showHeader && ( 
           <header className={styles.header}>
-            <Link href="/" className={styles["header-link"]}>Início</Link>
-            <Link href="/About" className={styles["header-link"]}>Sobre Nós</Link>
-            <Link href="/Services" className={styles["header-link"]}>Serviços</Link>
-            <Link href="/Questions" className={styles["header-link"]}>Dúvidas e FAQ</Link>
+            <Link href="/"><a className={styles["header-link"]}>Início</a></Link>
+            <Link href="/About"><a className={styles["header-link"]}>Sobre Nós</a></Link>
+            <Link href="/Services"><a className={styles["header-link"]}>Serviços</a></Link>
+            <Link href="/Questions"><a className={styles["header-link"]}>Contato e FAQ</a></Link>
           </header>
         )}
         {children}
       </div>
     );
-  };
-  
+};
+
 export default Layout;
