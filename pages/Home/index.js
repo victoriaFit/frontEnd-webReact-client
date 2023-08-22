@@ -1,10 +1,14 @@
+import Layout from "../../components/Layout";
+
 const Home = () => {
-    return (
+  return (
+    <Layout>
       <div>
         <p>A</p>
       </div>
-    );
-  };
-  
-  export default Home;
-  
+    </Layout>
+  );
+};
+
+
+export default Home;

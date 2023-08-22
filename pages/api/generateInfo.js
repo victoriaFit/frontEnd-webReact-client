@@ -1,11 +1,9 @@
 
 
 const { Configuration, OpenAIApi } = require('openai');
-// import json data from prompt.json file
 const { recipePrompt }  = require('./prompt.json');
 
 const configuration = new Configuration({
-  // apiKey: process.env.OPENAI_API_KEY,
   apiKey: process.env.OPENAI_API_KEY,
 });
 

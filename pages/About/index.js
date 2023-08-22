@@ -1,10 +1,14 @@
+import Layout from "../../components/Layout";
+
 const About = () => {
-    return (
+  return (
+    <Layout>
       <div>
         <p>A</p>
       </div>
-    );
-  };
-  
-  export default About;
-  
+    </Layout>
+  );
+};
+
+
+export default About;

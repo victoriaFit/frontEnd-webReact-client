@@ -1,10 +1,13 @@
+import Layout from "../../components/Layout";
+
 const Services = () => {
-    return (
+  return (
+    <Layout>
       <div>
         <p>A</p>
       </div>
-    );
-  };
-  
-  export default Services;
-  
+    </Layout>
+  );
+};
+
+export default Services;
