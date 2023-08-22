@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Layout from '../components/Layout';
+import Home from "./Home";
 
-const Home = () => {
+const Index = () => {
   return (
     <Layout>
-      
+       <Home />
     </Layout>
   );
 };
 
-export default Home;
+export default Index;
