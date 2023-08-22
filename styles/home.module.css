@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  background-color: #f5f5f5;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -15,4 +14,48 @@
 
 .header-link:hover {
   text-decoration: underline;
+}
+
+.introContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15%; 
+}
+
+.introText {
+  width: 65%;
+}
+
+.introText h1 {
+  font-size: 24px; 
+  margin-bottom: 10px; 
+}
+
+.introBlocks {
+  width: 35%;
+}
+
+.upperBlock, .lowerBlock {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%; 
+}
+
+.upperBlock p,
+.lowerBlock p {
+  margin-bottom: 5px; 
+}
+
+.upperBlock small,
+.lowerBlock small {
+  color: #06c;
+}
+.container {
+  background-color: #fcfafb;
 }
