@@ -1,90 +1,33 @@
 .header {
   display: flex;
-  justify-content: space-around;
-  padding: 5px 12%;
-  margin-top: -40px;
+  justify-content: space-between;
+  padding: 16px 16.9%;
 }
 
-.header-link {
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  color: black;
-  text-decoration: none;
-}
-
-.header-link:visited,
-.header-link:active,
-.header-link:focus {
-  color: black;
-  text-decoration: none;
-}
-
-.introContainer {
-  display: flex;
-  flex-direction: column;
+.left {
   align-items: center;
-  padding: 0 12%;
+  display: flex;
+  justify-content: flex-start;
 }
 
-.introText h1, .introText h2 {
+.right {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.companyName {
   font-family: 'Poppins', sans-serif;
-  text-align: center;
-  margin: 0;
-  margin-top: 40px;
-  margin-bottom: 50px;
-}
-
-.introText h1 {
-  font-size: 36px;
-  color: black;
-  font-weight: 600; 
-}
-
-.introTextOrange {
-  font-size: 36px;
-  color: #FB5F21;
-  font-weight: 600; 
-}
-
-.introTextSmall {
-  font-size: 28px;
-  color: #FB5F21; 
-  margin-top: -30px; 
-}
-
-.introText p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  color: black;
-}
-
-.introText button {
-  background-color: black;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif; 
   font-size: 16px;
-  margin-top: 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: block; 
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 45px;
+  color: black;
 }
 
-.introText button:hover {
-  background-color: #FB5F21; 
-  color: white; 
-  border: none; 
+.themeButton {
+  cursor: pointer;
+  width: 24px;
 }
 
-.container {
-  background-color: #fcfafb;
-  padding-top: 60px;
-}
-
-.introTextDescription {
-  text-align: center;
+.darkContainer {
+  background-color: #333;
+  color: #fff;
 }

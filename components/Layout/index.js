@@ -1,19 +1,35 @@
+import React, { useState } from 'react';
 import styles from "../../styles/home.module.css";
-import Link from 'next/link';
 
-const Layout = ({ children, showHeader = true }) => { 
-    return (
-      <div className={styles.container}>
-        {showHeader && ( 
-          <header className={styles.header}>
-            <Link href="/"><a className={styles["header-link"]}>Início</a></Link>
-            <Link href="/Services"><a className={styles["header-link"]}>Serviços</a></Link>
-            <Link href="/Questions"><a className={styles["header-link"]}>Contato e FAQ</a></Link>
-          </header>
-        )}
-        {children}
-      </div>
-    );
+const Layout = ({ children, showHeader = true }) => {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
+
+  return (
+    <div className={isDarkTheme ? styles.darkContainer : styles.container}>
+      {showHeader && (
+        <header className={styles.header}>
+          <div className={styles.left}>
+            <span className={styles.companyName}>victoria.fit</span>
+          </div>
+          <div className={styles.right}>
+            <img
+              src={isDarkTheme
+                ? "https://cdn.discordapp.com/attachments/1091506792900595863/1144045840340619285/moon.png"
+                : "https://cdn.discordapp.com/attachments/1091506792900595863/1144048381535211550/sun.png"}
+              alt="Toggle Theme"
+              className={styles.themeButton}
+              onClick={toggleTheme}
+            />
+          </div>
+        </header>
+      )}
+      {children}
+    </div>
+  );
 };
 
 export default Layout;
