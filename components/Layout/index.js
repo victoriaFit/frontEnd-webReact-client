@@ -7,7 +7,6 @@ const Layout = ({ children, showHeader = true }) => {
         {showHeader && ( 
           <header className={styles.header}>
             <Link href="/"><a className={styles["header-link"]}>Início</a></Link>
-            <Link href="/About"><a className={styles["header-link"]}>Sobre Nós</a></Link>
             <Link href="/Services"><a className={styles["header-link"]}>Serviços</a></Link>
             <Link href="/Questions"><a className={styles["header-link"]}>Contato e FAQ</a></Link>
           </header>
