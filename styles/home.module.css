@@ -6,23 +6,18 @@
   height: var(--header-height);
 }
 
-.darkTheme .header {
-  background-color: hsl(var(--hue), 8%, 13%);
-}
-
-
 .left .companyName {
-  color: var(--title-color); /* Applying the title color variable */
+  color: var(--title-color);
 }
 
-.dark.Theme .companyName {
+.darkTheme .companyName {
   color: white;
 }
 
 .themeButton {
   cursor: pointer;
   width: 24px;
-  color: var(--text-color); /* Applying the text color variable */
+  color: var(--text-color); 
 }
 
 
@@ -48,4 +43,145 @@
 .darkContainer {
   background-color: hsl(var(--hue), 8%, 13%);
   color: #fff;
+}
+
+.homeContainer {
+  position: relative;
+  row-gap: 4.5rem;
+  padding-top: 2rem;
+}
+
+.homeData {
+  text-align: center;
+}
+
+.homeGreeting,
+.homeSubtitle {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.homeTitle {
+  font-size: var(--biggest-font-size);
+  margin-bottom: -0.5rem; 
+}
+
+.homeGreeting {
+  display: block;
+  color: var(--title-color);
+  margin-bottom: -1.25rem;
+}
+
+.homeButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+
+.buttonGhost {
+  background-color: transparent;
+  border: 2px solid #FB5F21;
+  color: black;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+  color: var(--body-color);
+}
+
+.buttonGhost:hover {
+  background-color: #FB5F21;
+  color: var(--body-color);
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: black;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  transition: 0.4s;
+  font-style: none;
+  text-decoration: none;
+  font-weight: 600;
+}
+.button {
+  background-color: #FB5F21; 
+  color: var(--title-color);
+}
+.button:hover {
+  background-color: #FB5F21;
+  color: var(--body-color);
+}
+
+.homeImg {
+  width: 320px;
+  justify-content: center;
+  display: block;
+  margin: 0 auto;
+  padding: 6rem;
+}
+
+.section {
+  padding: 4.5rem 0 1rem;
+}
+
+.sectionTitle {
+  text-align: center;
+}
+
+.sectionSubtitle {
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: var(--h2-font-size);
+  color: #FB5F21;
+  margin-top: -1rem;
+}
+
+.sectionSubtitle {
+  display: block;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+.aboutImg {
+  width: 320px;
+  border-radius: 1.5rem;
+  justify-self: center;
+  flex: 1; /* Ocupa metade do espaço disponível */
+  max-width: 50%; /* Define a largura máxima como 50% */
+
+}
+
+.aboutContainer {
+  display: flex; 
+  align-items: center; 
+  gap: 20px;
+  justify-content: space-between; 
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.aboutProject {
+  text-align: left;
+  flex: 1; /* Ocupa metade do espaço disponível */
+  max-width: 50%; /* Define a largura máxima como 50% */
+  padding-left: 3rem;
+
+}
+
+.aboutDescription {
+  margin-bottom: 2rem;
+  text-align: left;
 }
