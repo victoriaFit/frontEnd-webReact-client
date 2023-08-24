@@ -52,6 +52,59 @@ const Home = ({ isDarkTheme }) => {
                 </div>
             </div>
         </section>
+        <section className={styles.serviceContainer1} id="service">
+            <span className={styles.sectionSubtitle}>Teste gratuitamente</span>
+            <h2 className={styles.sectionTitle}>Nossos Serviços</h2>
+
+            <div className={styles.serviceFilter}>
+                <span className={styles.serviceItem} style={{ color: isDarkTheme ? "#fff" : "black"}} data-filter="all">Todos</span>
+                <span className={styles.serviceItem} style={{ color: isDarkTheme ? "#fff" : "black"}} data-filter=".web">Interativos</span>
+                <span className={styles.serviceItem} style={{ color: isDarkTheme ? "#fff" : "black"}} data-filter=".design">Novos Lugares</span>
+            </div>
+
+            <div className={styles.serviceContainer}>
+                <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
+                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+
+                    <h3 className={styles.serviceTitle}>Localizando</h3>
+
+                    <a href="#" className={styles.serviceButton}>
+                        Experimentar <i class="bx bx-right-arrow-alt service__icon"></i>
+                    </a>
+                </div>
+
+                <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
+                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+
+                    <h3 className={styles.serviceTitle}>Culturando-se</h3>
+
+                    <a href="#" className={styles.serviceButton}>
+                        Conheça <i class="bx bx-right-arrow-alt service__icon"></i>
+                    </a>
+                </div>
+
+                <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
+                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+
+                    <h3 className={styles.serviceTitle}>Culturando-se</h3>
+
+                    <a href="#" className={styles.serviceButton}>
+                        Conheça <i class="bx bx-right-arrow-alt service__icon"></i>
+                    </a>
+                </div>
+
+                <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
+                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+
+                    <h3 className={styles.serviceTitle}>Culturando-se</h3>
+
+                    <a href="#" className={styles.serviceButton}>
+                        Conheça <i class="bx bx-right-arrow-alt service__icon"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
         <a href="/Questions">botão muito épico para levar para o chat muito epico</a>
       </main>
     </Layout>
