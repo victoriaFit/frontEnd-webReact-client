@@ -1,0 +1,44 @@
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Ocupa toda a altura da tela */
+    background-color: var(--body-color);
+    color: var(--text-color);
+  }
+  
+  .errorTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #FB5F21;
+  }
+  
+  .errorDescription {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    padding-bottom: 1.6rem;
+  }
+  
+  .errorImage {
+    width: 160px;
+    margin: 1rem auto;
+  }
+  
+  .errorButton {
+    display: inline-block;
+    background-color: #FB5F21;
+    color: var(--body-color);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.4s;
+  }
+  
+  .errorButton:hover {
+    background-color: #E54E1A;
+    color: var(--body-color);
+  }
+  
