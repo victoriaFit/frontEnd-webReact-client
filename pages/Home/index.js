@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 
 import Layout from "../../components/Layout";
+import Footer from "../../components/Footer";
 import styles from "../../styles/home.module.css";
 
 const Home = ({ isDarkTheme }) => { 
@@ -9,10 +10,15 @@ const Home = ({ isDarkTheme }) => {
   };
 
   const aboutSectionRef = useRef(null); 
+  const serviceSectionRef = useRef(null); 
 
   const scrollToAboutSection = () => {
     aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const scrollToServiceSection = () => {
+    serviceSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
 
   return (
     <Layout showHeader={false}>
@@ -48,10 +54,58 @@ const Home = ({ isDarkTheme }) => {
                     Procuramos fornecer uma abordagem única - e inovadora - no âmbito da assistência a equipamentos de academia, uma forma renovada de encarar e aprimorar o desempenho dos equipamentos que impulsionam sua jornada fitness.
                     </p>
 
-                    <a href="#service" className={styles.button}>Serviços</a>
+                    <a onClick={scrollToServiceSection} className={styles.button}>Serviços</a>
                 </div>
             </div>
         </section>
+        <section className={styles.serviceContainer1} ref={serviceSectionRef} id="service">
+            <span className={styles.sectionSubtitle}>Teste gratuitamente</span>
+            <h2 className={styles.sectionTitle}>Nossos Serviços</h2>
+
+            <div className={styles.serviceContainer}>
+                <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
+                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+
+                    <h3 className={styles.serviceTitle}>Manutenção</h3>
+
+                    <a href="#" className={styles.serviceButton}>
+                        Experimentar <i class="bx bx-right-arrow-alt service__icon"></i>
+                    </a>
+                </div>
+
+                <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
+                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+
+                    <h3 className={styles.serviceTitle}>Reparo</h3>
+
+                    <a href="#" className={styles.serviceButton}>
+                        Conheça <i class="bx bx-right-arrow-alt service__icon"></i>
+                    </a>
+                </div>
+
+                <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
+                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+
+                    <h3 className={styles.serviceTitle}>Vendas</h3>
+
+                    <a href="#" className={styles.serviceButton}>
+                        Conheça <i class="bx bx-right-arrow-alt service__icon"></i>
+                    </a>
+                </div>
+
+                <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
+                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+
+                    <h3 className={styles.serviceTitle}>Compras</h3>
+
+                    <a href="#" className={styles.serviceButton}>
+                        Conheça <i class="bx bx-right-arrow-alt service__icon"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        <Footer />
         <a href="/Questions">botão muito épico para levar para o chat muito epico</a>
       </main>
     </Layout>
