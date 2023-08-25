@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 
 import Layout from "../../components/Layout";
+import Footer from "../../components/Footer";
 import styles from "../../styles/home.module.css";
 
 const Home = ({ isDarkTheme }) => { 
@@ -9,10 +10,15 @@ const Home = ({ isDarkTheme }) => {
   };
 
   const aboutSectionRef = useRef(null); 
+  const serviceSectionRef = useRef(null); 
 
   const scrollToAboutSection = () => {
     aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const scrollToServiceSection = () => {
+    serviceSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
 
   return (
     <Layout showHeader={false}>
@@ -48,11 +54,11 @@ const Home = ({ isDarkTheme }) => {
                     Procuramos fornecer uma abordagem única - e inovadora - no âmbito da assistência a equipamentos de academia, uma forma renovada de encarar e aprimorar o desempenho dos equipamentos que impulsionam sua jornada fitness.
                     </p>
 
-                    <a href="#service" className={styles.button}>Serviços</a>
+                    <a onClick={scrollToServiceSection} className={styles.button}>Serviços</a>
                 </div>
             </div>
         </section>
-        <section className={styles.serviceContainer1} id="service">
+        <section className={styles.serviceContainer1} ref={serviceSectionRef} id="service">
             <span className={styles.sectionSubtitle}>Teste gratuitamente</span>
             <h2 className={styles.sectionTitle}>Nossos Serviços</h2>
 
@@ -99,6 +105,7 @@ const Home = ({ isDarkTheme }) => {
 
             </div>
         </section>
+        <Footer />
         <a href="/Questions">botão muito épico para levar para o chat muito epico</a>
       </main>
     </Layout>
