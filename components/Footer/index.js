@@ -31,18 +31,6 @@ const Footer = () => {
                         <img className={styles.footerSocialIcon} src="https://cdn.discordapp.com/attachments/1091506792900595863/1145149259457499177/facebook.png" alt="Facebook" />
                     </a>
                 </ul>
-                        <a href="https://www.facebook.com/" target="_blank" className={styles.footerSocialLink}>
-                            <i class="bx bxl-facebook"></i>
-                        </a>
-
-                        <a href="https://www.instagram.com/" target="_blank" className={styles.footerSocialLink}>
-                            <i class="bx bxl-instagram"></i>
-                        </a>
-
-                        <a href="https://www.instagram.com/" target="_blank" className={styles.footerSocialLink}>
-                            <i class="bx bxl-twitter"></i>
-                        </a>
-                    </ul>
 
                     <span className={styles.footerCopy}>
                         &#169; victoriaFit. All rigths reserved

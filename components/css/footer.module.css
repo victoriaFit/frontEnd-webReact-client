@@ -35,8 +35,6 @@
 .footerSocialLink {
     background-color: #FB5F21;
     color: var(--body-color);
-    background-color: var(--body-color);
-    color: var(--first-color);
     padding: 0.25rem;
     border-radius: 0.25rem;
     font-size: 1rem;
