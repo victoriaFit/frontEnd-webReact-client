@@ -10,6 +10,7 @@
 .footerTitle,
 .footerLink {
     color: var(--body-color);
+    text-decoration: none; 
 }
 
 .footerTitle {
@@ -22,6 +23,7 @@
     justify-content: center;
     column-gap: 1.5rem;
     margin-bottom: 2rem;
+    list-style-type: none;
 }
 
 .footerSocial {
@@ -31,12 +33,16 @@
 }
 
 .footerSocialLink {
+    background-color: #FB5F21;
+    color: var(--body-color);
     background-color: var(--body-color);
     color: var(--first-color);
     padding: 0.25rem;
     border-radius: 0.25rem;
     font-size: 1rem;
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footerCopy {
@@ -45,4 +51,9 @@
     color: var(--container-color);
     text-align: center;
     font-size: var(--smaller-font-size);
+}
+
+.footerSocialIcon {
+    width: 24px; 
+    height: 24px; 
 }

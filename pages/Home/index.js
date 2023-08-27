@@ -68,6 +68,7 @@ const Home = ({ isDarkTheme }) => {
 
                     <h3 className={styles.serviceTitle}>Manutenção</h3>
 
+
                     <a href="#" className={styles.serviceButton}>
                         Experimentar <i class="bx bx-right-arrow-alt service__icon"></i>
                     </a>
@@ -95,6 +96,15 @@ const Home = ({ isDarkTheme }) => {
 
                 <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
                     <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+
+                    <h3 className={styles.serviceTitle}>Vendas</h3>
+
+                </div>
+
+                <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
+                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+
+                    <h3 className={styles.serviceTitle}>Compras</h3>
 
                     <h3 className={styles.serviceTitle}>Compras</h3>
 
