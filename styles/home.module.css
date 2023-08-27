@@ -17,7 +17,7 @@
 .themeButton {
   cursor: pointer;
   width: 24px;
-  color: var(--text-color); 
+  color: var(--text-color);
 }
 
 
@@ -63,7 +63,7 @@
 
 .homeTitle {
   font-size: var(--biggest-font-size);
-  margin-bottom: -0.5rem; 
+  margin-bottom: -0.5rem;
 }
 
 .homeGreeting {
@@ -114,10 +114,12 @@
   text-decoration: none;
   font-weight: 600;
 }
+
 .button {
-  background-color: #FB5F21; 
+  background-color: #FB5F21;
   color: var(--title-color);
 }
+
 .button:hover {
   background-color: #FB5F21;
   color: var(--body-color);
@@ -159,24 +161,25 @@
   width: 320px;
   border-radius: 1.5rem;
   justify-self: center;
-  flex: 1; 
-  max-width: 50%; 
+  flex: 1;
+  max-width: 50%;
 
 }
 
 .aboutContainer {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   gap: 20px;
-  justify-content: space-between; 
+  justify-content: space-between;
+  padding: 3rem;
   padding-left: 20rem;
   padding-right: 20rem;
 }
 
 .aboutProject {
   text-align: left;
-  flex: 1; 
-  max-width: 50%; 
+  flex: 1;
+  max-width: 50%;
   padding-left: 3rem;
 
 }
@@ -184,4 +187,81 @@
 .aboutDescription {
   margin-bottom: 2rem;
   text-align: left;
+}
+
+.serviceContainer1 {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  flex-direction: column;
+  align-items: center; /* Centraliza verticalmente */
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.serviceContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 800px; /* Ajuste conforme necessário */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  padding-left: 5rem;
+}
+.serviceFilter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.serviceItem {
+  cursor: pointer;
+  color: var(--title-color);
+  padding: 0.25rem 0.75rem;
+  font-weight: var(--font-medium);
+  border-radius: 0.5rem;
+}
+
+.serviceCard {
+  background-color: var(--container-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 300px; /* Ajuste para um tamanho menor */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05); /* Adiciona sombra focalizada */
+}
+
+
+.serviceImg {
+  border-radius: 1rem;
+  margin-bottom: 0.75rem;
+  width: 180px; /* Ajuste para um tamanho menor */
+}
+
+.serviceTitle {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: 0.25rem;
+}
+
+.serviceButton {
+  width: max-content;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.serviceButton:hover .serviceIcon {
+  transform: translateX(0.25rem);
+}
+
+.serviceIcon {
+  font-size: 1rem;
+  transition: 0.4s;
 }

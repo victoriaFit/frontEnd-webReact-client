@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Layout from "../../components/Layout";
 import styles from "../../styles/home.module.css";
 
 const Questions = () => {
@@ -29,7 +28,7 @@ const Questions = () => {
   };
 
   return (
-    <Layout>
+    <div>
       <div className={styles.chat}>
         <div className={styles["chat-header"]}>Assistência Técnica Victória Fitness</div>
         <div className={styles["chat-messages"]}>
@@ -57,7 +56,7 @@ const Questions = () => {
         <h2>Aqui está sua respostaee</h2>
         <p>{chatResponse}</p> 
       </section>
-    </Layout>
+    </div>
   );
 };
 
