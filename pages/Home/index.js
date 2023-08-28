@@ -59,64 +59,40 @@ const Home = ({ isDarkTheme }) => {
             </div>
         </section>
         <section className={styles.serviceContainer1} ref={serviceSectionRef} id="service">
-            <span className={styles.sectionSubtitle}>Teste gratuitamente</span>
+            <span className={styles.sectionSubtitle}>Apresentação</span>
             <h2 className={styles.sectionTitle}>Nossos Serviços</h2>
 
             <div className={styles.serviceContainer}>
                 <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
-                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1145798943784050717/male-mechanic.png" alt="" className={styles.serviceImg} />
 
                     <h3 className={styles.serviceTitle}>Manutenção</h3>
-
-
-                    <a href="#" className={styles.serviceButton}>
-                        Experimentar <i class="bx bx-right-arrow-alt service__icon"></i>
-                    </a>
                 </div>
 
                 <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
-                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1145798683506507786/construction-worker-holding-drill-machine.png" alt="" className={styles.serviceImg} />
 
                     <h3 className={styles.serviceTitle}>Reparo</h3>
-
-                    <a href="#" className={styles.serviceButton}>
-                        Conheça <i class="bx bx-right-arrow-alt service__icon"></i>
-                    </a>
                 </div>
 
                 <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
-                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1145799818451615765/empty-cart.png" alt="" className={styles.serviceImg} />
 
                     <h3 className={styles.serviceTitle}>Vendas</h3>
-
-                    <a href="#" className={styles.serviceButton}>
-                        Conheça <i class="bx bx-right-arrow-alt service__icon"></i>
-                    </a>
                 </div>
 
-                <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
-                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
-
-                    <h3 className={styles.serviceTitle}>Vendas</h3>
-
-                </div>
+                
 
                 <div className={styles.serviceCard} style={{ backgroundColor: isDarkTheme ? "hsl(207, 8%, 13%)" : "fff"}}>
-                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1144353119652806767/weighing-scale.png" alt="" className={styles.serviceImg} />
+                    <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1145798389888467095/shop-button.png" alt="" className={styles.serviceImg} />
 
                     <h3 className={styles.serviceTitle}>Compras</h3>
-
-                    <h3 className={styles.serviceTitle}>Compras</h3>
-
-                    <a href="#" className={styles.serviceButton}>
-                        Conheça <i class="bx bx-right-arrow-alt service__icon"></i>
-                    </a>
                 </div>
 
             </div>
         </section>
         <Footer />
-        <a href="/Questions">botão muito épico para levar para o chat muito epico</a>
+        { /* <a href="/Questions">botão muito épico para levar para o chat muito epico</a> */}
       </main>
     </Layout>
    
