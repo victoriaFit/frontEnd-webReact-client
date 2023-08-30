@@ -341,3 +341,93 @@
   border: 1px solid #ccc;
   overflow-y: scroll;
 }
+.fixedButtonContainer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.fixedButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+  border-color: transparent;
+  border-radius: 50%; 
+  outline: none; 
+  background: #FB5F21; 
+  width: 50px; 
+  height: 50px;
+}
+
+.fixedChatModal {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ccc;
+  overflow-y: scroll;
+}
+
+
+.chat-header {
+  background-color: #FB5F21;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.chat-messages {
+  padding: 10px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-message-bot {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 80%;
+}
+
+.form {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.form-header {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.form-button {
+  background-color: #FB5F21;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

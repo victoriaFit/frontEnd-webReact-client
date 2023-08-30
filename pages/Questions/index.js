@@ -5,7 +5,7 @@ import styles from "../../styles/home.module.css";
 const Questions = () => {
   const [chatMessage, setChatMessage] = useState("");
   const [chatResponse, setChatResponse] = useState("");
-  const [isChatVisible, setIsChatVisible] = useState(false); 
+  const [isChatVisible, setIsChatVisible] = useState(false);
 
   const handleChatChange = (event) => {
     setChatMessage(event.target.value);
@@ -20,7 +20,6 @@ const Questions = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ recipe: chatMessage }),
-
     });
 
     const data = await response.json();
@@ -32,7 +31,9 @@ const Questions = () => {
 
   return (
     <div className={styles.fixedButtonContainer}>
-      <button className={styles.fixedButton} onClick={() => setIsChatVisible(!isChatVisible)}>Abrir/Fechar Chat</button>
+      <button className={styles.fixedButton} onClick={() => setIsChatVisible(!isChatVisible)}>
+        <img src="https://cdn.discordapp.com/attachments/1091506792900595863/1146488941617369180/chat.png" alt="Chat Icon" width="24" height="24" />
+      </button>
 
       {isChatVisible && (
         <div className={styles.fixedChatModal}>
@@ -42,7 +43,11 @@ const Questions = () => {
               <div className={`${styles["chat-message"]} ${styles["chat-message-bot"]}`}>
                 Olá! Como posso ajudar?
               </div>
+              <div className={`${styles["chat-message"]} ${styles["chat-message-bot"]}`}>
+                {chatResponse}
+              </div>
             </div>
+
             <form className={styles.form} onSubmit={handleSubmit}>
               <div className={styles["form-header"]}>Tire suas dúvidas</div>
               <div className={styles["form-label"]}>Digite sua pergunta:</div>
@@ -59,10 +64,6 @@ const Questions = () => {
               </button>
             </form>
           </div>
-          <section>
-            <h2>Aqui está sua resposta</h2>
-            <p>{chatResponse}</p>
-          </section>
         </div>
       )}
     </div>
