@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 
 import Layout from "../../components/Layout";
 import Footer from "../../components/Footer";
+import Questions from "../Questions";
+
 import styles from "../../styles/home.module.css";
 
 const Home = ({ isDarkTheme }) => { 
@@ -92,7 +94,7 @@ const Home = ({ isDarkTheme }) => {
             </div>
         </section>
         <Footer />
-        { /* <a href="/Questions">botão muito épico para levar para o chat muito epico</a> */}
+        <Questions />
       </main>
     </Layout>
    

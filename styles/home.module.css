@@ -315,3 +315,29 @@
     font-size: 20px;
   }
 }
+
+.fixedButtonContainer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.fixedButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.fixedChatModal {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  height: 600px;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ccc;
+  overflow-y: scroll;
+}

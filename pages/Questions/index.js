@@ -1,11 +1,13 @@
+
 import React, { useState } from "react";
 import styles from "../../styles/home.module.css";
 
 const Questions = () => {
-  const [chatMessage, setChatMessage] = useState(""); 
-  const [chatResponse, setChatResponse] = useState(""); 
+  const [chatMessage, setChatMessage] = useState("");
+  const [chatResponse, setChatResponse] = useState("");
+  const [isChatVisible, setIsChatVisible] = useState(false); 
 
-  const handleChatChange = (event) => { 
+  const handleChatChange = (event) => {
     setChatMessage(event.target.value);
   };
 
@@ -17,45 +19,52 @@ const Questions = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ chatMessage }), 
+      body: JSON.stringify({ recipe: chatMessage }),
+
     });
 
     const data = await response.json();
 
     if (data.success) {
-      setChatResponse(data.data); 
+      setChatResponse(data.data);
     }
   };
 
   return (
-    <div>
-      <div className={styles.chat}>
-        <div className={styles["chat-header"]}>Assistência Técnica Victória Fitness</div>
-        <div className={styles["chat-messages"]}>
-          <div className={`${styles["chat-message"]} ${styles["chat-message-bot"]}`}>
-            Olá! Como posso ajudar?
+    <div className={styles.fixedButtonContainer}>
+      <button className={styles.fixedButton} onClick={() => setIsChatVisible(!isChatVisible)}>Abrir/Fechar Chat</button>
+
+      {isChatVisible && (
+        <div className={styles.fixedChatModal}>
+          <div className={styles.chat}>
+            <div className={styles["chat-header"]}>Assistência Técnica Victória Fitness</div>
+            <div className={styles["chat-messages"]}>
+              <div className={`${styles["chat-message"]} ${styles["chat-message-bot"]}`}>
+                Olá! Como posso ajudar?
+              </div>
+            </div>
+            <form className={styles.form} onSubmit={handleSubmit}>
+              <div className={styles["form-header"]}>Tire suas dúvidas</div>
+              <div className={styles["form-label"]}>Digite sua pergunta:</div>
+              <textarea
+                className={styles["form-textarea"]}
+                name="chatMessage"
+                id="chatMessage"
+                cols="30"
+                rows="10"
+                onChange={handleChatChange}
+              ></textarea>
+              <button className={styles["form-button"]} type="submit">
+                Enviar
+              </button>
+            </form>
           </div>
+          <section>
+            <h2>Aqui está sua resposta</h2>
+            <p>{chatResponse}</p>
+          </section>
         </div>
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <div className={styles["form-header"]}>Tire suas dúvidas</div>
-          <div className={styles["form-label"]}>Digite sua pergunta:</div>
-          <textarea
-            className={styles["form-textarea"]}
-            name="chatMessage" 
-            id="chatMessage" 
-            cols="30"
-            rows="10"
-            onChange={handleChatChange} 
-          ></textarea>
-          <button className={styles["form-button"]} type="submit">
-            Enviar
-          </button>
-        </form>
-      </div>
-      <section>
-        <h2>Aqui está sua respostaee</h2>
-        <p>{chatResponse}</p> 
-      </section>
+      )}
     </div>
   );
 };
