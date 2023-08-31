@@ -4,14 +4,14 @@
   padding: 16px 16.9%;
   background-color: var(--body-color);
   height: var(--header-height);
-  position: sticky; 
-  top: 0; 
-  z-index: 1000; 
-  transition: box-shadow 0.3s ease; 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
 }
 
 .header.scrolled {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .left .companyName {
@@ -200,9 +200,9 @@
 
 .serviceContainer1 {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   gap: 1.5rem;
   padding-top: 1rem;
 }
@@ -213,7 +213,7 @@
   gap: 1.5rem;
   margin: 0 auto;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .serviceFilter {
@@ -236,19 +236,19 @@
   background-color: var(--container-color);
   padding: 1rem;
   border-radius: 1rem;
-  max-width: 320px; 
+  max-width: 320px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05); 
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
 }
 
 
 .serviceImg {
   border-radius: 1rem;
   margin-bottom: 0.75rem;
-  width: 280px; 
+  width: 280px;
 }
 
 .serviceTitle {
@@ -279,37 +279,46 @@
   .header {
     padding: 16px 5%;
   }
+
   .left .companyName {
-    font-size: 14px; 
+    font-size: 14px;
   }
+
   .themeButton {
     width: 20px;
   }
+
   .aboutContainer {
     flex-direction: column;
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
   .serviceContainer {
     grid-template-columns: 1fr;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
   }
 
-  .aboutProject, .aboutDescription {
+  .aboutProject,
+  .aboutDescription {
     text-align: center;
     padding-left: 0;
   }
+
   .homeImg {
     width: 180px;
     padding: 2rem;
   }
+
   .serviceImg {
-    width: 180px; 
+    width: 180px;
   }
+
   .serviceCard {
     max-width: 250px;
   }
+
   .left .companyName {
     color: var(--title-color);
     font-size: 20px;
@@ -328,6 +337,8 @@
   bottom: 20px;
   right: 20px;
   z-index: 1001;
+  border: none;
+  outline: none;
 }
 
 .fixedChatModal {
@@ -339,8 +350,11 @@
   z-index: 1000;
   background-color: white;
   border: 1px solid #ccc;
-  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
+
 .fixedButtonContainer {
   position: fixed;
   bottom: 0;
@@ -348,33 +362,43 @@
   z-index: 1000;
 }
 
+
 .fixedButton {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 1001;
   border-color: transparent;
-  border-radius: 50%; 
-  outline: none; 
-  background: #FB5F21; 
-  width: 50px; 
+  border-radius: 50%;
+  outline: none;
+  background: #FB5F21;
+  width: 50px;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fixedChatModal {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 600px;
-  height: 600px;
+  width: 400px;
+  height: 80vh;
   z-index: 1000;
   background-color: white;
   border: 1px solid #ccc;
-  overflow-y: scroll;
+  border-radius: 10px;
+  overflow-y: auto;
 }
 
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-.chat-header {
+.chatHeader {
   background-color: #FB5F21;
   color: white;
   padding: 10px;
@@ -384,50 +408,105 @@
   border-radius: 10px 10px 0 0;
 }
 
-.chat-messages {
-  padding: 10px;
+.closeChat {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 1002;
+}
+
+.chatMessages {
   flex: 1;
+  padding: 10px;
   overflow-y: auto;
 }
 
-.chat-message-bot {
-  background-color: #f1f1f1;
+.chatMessageBot,
+.chatMessageUser {
+  margin-bottom: 10px;
   padding: 10px;
+  max-width: 70%;
   border-radius: 10px;
-  margin-bottom: 10px;
-  max-width: 80%;
 }
 
-.form {
-  padding: 10px;
-  border-top: 1px solid #ccc;
+.chatMessageBot {
+  background-color: #f1f1f1;
+  align-self: flex-start;
 }
 
-.form-header {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 10px;
+.chatMessageUser {
+  background-color: #e6f7ff;
+  align-self: flex-end;
 }
 
-.form-label {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.form-textarea {
-  width: 100%;
+.formTextarea {
+  flex: 1;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   resize: none;
-  margin-bottom: 10px;
 }
 
-.form-button {
+.formButton {
   background-color: #FB5F21;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+
+/* Adicionado para melhorar a aparência do chat */
+.chatMessageUser {
+  background-color: #FB5F21;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  align-self: flex-end;
+}
+
+.fixedChatModal {
+  display: flex;
+  flex-direction: column;
+
+  .form {
+    flex-shrink: 0;
+  }
+
+  .formContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .chatMessages {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formTextarea {
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+  }
+
+  .formButton {
+    background-color: #FB5F21;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
