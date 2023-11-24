@@ -27,7 +27,7 @@ const Layout = ({ children, showHeader = true }) => {
       {showHeader && (
         <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`} style={{ backgroundColor: isDarkTheme ? 'hsl(207, 8%, 13%)' : 'var(--body-color)' }}>
           <div className={styles.left}>
-            <span className={styles.companyName} style={{ color: isDarkTheme ? '#FB5F21' : '#FB5F21' }}>victoria. fit</span>
+            <span className={styles.companyName} style={{ color: isDarkTheme ? 'white' : 'black' }}>project name</span>
           </div>
           <div className={styles.right}>
             <img

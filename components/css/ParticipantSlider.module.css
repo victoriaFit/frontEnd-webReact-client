@@ -1,0 +1,51 @@
+/* ParticipantSlider.module.css */
+.slider {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .slide {
+    flex: 0 0 50%;
+    scroll-snap-align: start;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .participantImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .participantInfo {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+    margin-top: -30px;
+    text-align: left;
+  }
+  
+  .participantInfo h3 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .participantInfo p {
+    color: #666;
+  }
+  
+  .githubLink img {
+    width: 24px;
+    height: 24px;
+  }
+  

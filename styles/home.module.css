@@ -92,7 +92,7 @@
 
 .buttonGhost {
   background-color: transparent;
-  border: 2px solid #FB5F21;
+  border: 2px solid gray;
   color: black;
   border-radius: 0.5rem;
   padding: 0.75rem 1rem;
@@ -107,7 +107,7 @@
 }
 
 .buttonGhost:hover {
-  background-color: #FB5F21;
+  background-color: gray;
   color: var(--body-color);
 }
 
@@ -125,12 +125,12 @@
 }
 
 .button {
-  background-color: #FB5F21;
+  background-color: gray;
   color: var(--title-color);
 }
 
 .button:hover {
-  background-color: #FB5F21;
+  background-color: #8c8c8c;
   color: var(--body-color);
 }
 
@@ -156,7 +156,7 @@
 
 .sectionTitle {
   font-size: var(--h2-font-size);
-  color: #FB5F21;
+  color: black;
   margin-top: -1rem;
 }
 
